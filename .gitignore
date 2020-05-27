@@ -130,4 +130,11 @@ dmypy.json
 
 *.DS_Store*
 *.idea*
-ssp_3d_final*
+
+# Dataset
+ssp_3d*
+
+# Additional files
+additional/*
+!additional/README.md
+
