@@ -14,6 +14,8 @@ We provide a python3 script `visualisation.py` that demonstrates how to project/
 
 Additionally, please download the [SMPL male and female models](http://smpl.is.tue.mpg.de). You will need to convert the SMPL model files to be compatible with python3 by removing any chumpy objects. To do so, please follow the instructions [here](https://github.com/vchoutas/smplx/tree/master/tools). Rename the models to `SMPL_MALE.pkl` and `SMPL_FEMALE.pkl`. Finally, set `SSP_3D_PATH` in `config.py` to the SSP-3D root directory path. Set `SMPL_MODEL_DIR` to the path of the directory with the SMPL models.
 
+After completing set-up, run `python visualisation.py`.
+
 ## Metrics
 This dataset is intended for use as a body shape evaluation benchmark. If you decide to use this dataset, we recommend you report the following metrics:
 - mIOU: mean Intersection-over-Union between target silhouette and predicted SMPL silhouette.
