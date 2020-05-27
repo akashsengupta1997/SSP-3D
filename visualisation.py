@@ -22,6 +22,7 @@ indices_to_plot = [11, 60, 199]  # Visualising 3 examples from SSP-3D
 for i in indices_to_plot:
     data = ssp3d_dataset.__getitem__(i)
 
+    fname = data['fname']
     image = data['image']
     cropped_image = data['cropped_image']
     silhouette = data['silhouette']
@@ -57,7 +58,8 @@ for i in indices_to_plot:
     rend_img = renderer(vertices, cam_trans, img=image)
 
     # Visualise
-    plt.figure(figsize=(14, 8))
+    fig = plt.figure(figsize=(14, 8))
+    fig.suptitle(fname)
     plt.tight_layout()
 
     plt.subplot(231)
@@ -95,5 +97,5 @@ for i in indices_to_plot:
     plt.gca().set_axis_off()
     plt.imshow(rend_img)
 
-    plt.subplots_adjust(top=0.93, bottom=0.07, right=1, left=0, hspace=0.13, wspace=0)
+    plt.subplots_adjust(top=0.93, bottom=0.0, right=1, left=0, hspace=0.13, wspace=0)
     plt.show()
