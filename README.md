@@ -10,7 +10,9 @@ SSP-3D is an evaluation dataset consisting of 311 images of sportspersons in tig
 Since SSP-3D is a small dataset, the zip file containing all the necessary data is a part of this repository. Unzipping it will reveal a folder with images, a folder with silhouette annotations and a file called `labels.npz`. This file contains arrays with filenames, SMPL pose parameters, SMPL shape parameters, genders, 2D joint annotations, camera translations and bounding boxes for each image.
 
 ## Code
-`visualisation.py` demonstrates how to project/render/visualise all the relevant data. To run the script, you will need to install the relevant libraries: `pip install requirements.txt`.
+We provide a script `visualisation.py` that demonstrates how to project/render/visualise all the relevant data. To run the script, you will need to install the relevant libraries: `pip install requirements.txt`. If you have trouble install `pyrender`, please take a look at the [docs](https://pyrender.readthedocs.io/en/latest/install/index.html).
+
+Additionally, please download the [SMPL male and female models](http://smpl.is.tue.mpg.de). You will need to convert the SMPL model files to be compatible with python3 by removing any chumpy objects. To do so, please follow the instructions [here](https://github.com/vchoutas/smplx/tree/master/tools). Rename the models to `SMPL_MALE.pkl` and `SMPL_FEMALE.pkl`. Finally, set `SSP_3D_PATH` in `config.py` to the SSP-3D root directory path. Set `SMPL_MODEL_DIR` to the path of the directory with the SMPL models.
 
 ## Metrics
 This dataset is intended for use as a body shape evaluation benchmark. If you decide to use this dataset, we recommend you report the following metrics:
