@@ -11,12 +11,12 @@ class Renderer:
     Renderer used for visualizing the SMPL model
     Code adapted from https://github.com/vchoutas/smplify-x
     """
-    def __init__(self, img_res=512):
+    def __init__(self, faces, img_res=512):
         self.renderer = pyrender.OffscreenRenderer(viewport_width=img_res,
                                                    viewport_height=img_res,
                                                    point_size=1.0)
         self.camera_center = [img_res // 2, img_res // 2]
-        self.faces = np.load(config.SMPL_FACES_PATH)
+        self.faces = faces
         self.img_res = img_res
 
         # set the scene

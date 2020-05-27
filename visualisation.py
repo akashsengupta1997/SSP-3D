@@ -1,4 +1,6 @@
 import torch
+# import matplotlib
+# matplotlib.use('MACOSX')
 import matplotlib.pyplot as plt
 from smplx import SMPL
 
@@ -12,7 +14,7 @@ smpl_male = SMPL(config.SMPL_MODEL_DIR, batch_size=1, gender='male')
 smpl_female = SMPL(config.SMPL_MODEL_DIR, batch_size=1, gender='female')
 
 # Pyrender renderer
-renderer = Renderer(img_res=512)
+renderer = Renderer(faces=smpl_male.faces, img_res=512)
 
 # SSP-3D datset class
 ssp3d_dataset = SSP3DDataset(config.SSP_3D_PATH)
