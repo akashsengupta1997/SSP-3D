@@ -20,3 +20,15 @@ After completing set-up, run `python visualisation.py`.
 This dataset is intended for use as a body shape evaluation benchmark. If you decide to use this dataset, we recommend you report the following metrics:
 - mIOU: mean Intersection-over-Union between target silhouette and predicted SMPL silhouette.
 - PVE-T-SC (mm): per-vertex error in a neutral pose (T-pose) after after scale-correction (to account for scale vs camera depth ambiguity). An example of how to compute this metric given predicted in `metrics.py`.
+
+## Citations
+If you find this code useful in your research, please cite the following publication:
+```
+@InProceedings{STRAPS2018BMVC,
+               author = {Sengupta, Akash and Budvytis, Ignas and Cipolla, Roberto},
+               title = {Synthetic Training for Accurate 3D Human Pose and Shape Estimation in the Wild},
+               booktitle = {British Machine Vision Conference (BMVC)},
+               month = {September},
+               year = {2020}                         
+}
+```
