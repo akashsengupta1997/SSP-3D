@@ -22,7 +22,7 @@ This dataset is intended for use as a body shape evaluation benchmark. If you de
 - PVE-T-SC (mm): per-vertex error in a neutral pose (T-pose) after after scale-correction (to account for scale vs camera depth ambiguity). An example of how to compute this metric given predicted in `metrics.py`.
 
 ## Citations
-If you find this code useful in your research, please cite the following publication:
+If you find this dataset useful for your research, please cite the following publication:
 ```
 @InProceedings{STRAPS2018BMVC,
                author = {Sengupta, Akash and Budvytis, Ignas and Cipolla, Roberto},
