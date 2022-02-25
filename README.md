@@ -16,6 +16,12 @@ Additionally, please download the [SMPL male and female models](http://smpl.is.t
 
 After completing set-up, run `python visualisation.py`.
 
+## Inferense
+Run this command for your custom data:
+```
+python inference.py
+```
+
 ## Metrics
 This dataset is intended for use as a body shape evaluation benchmark. If you decide to use this dataset, we recommend you report the following metrics:
 - mIOU: mean Intersection-over-Union between target silhouette and predicted SMPL silhouette.
